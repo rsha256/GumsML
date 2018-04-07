@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">KleanGums</string>
+    <string name="current_state_of_gums">Current State of Gums:</string>
+    <string name="user_stateOfGums">N/A</string>
+    <string name="blueBox" />
+    <string name="currentStateOfGumsMessage">Current State of Gums:   </string>
+</resources>
