@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">KleanGums</string>
-    <string name="current_state_of_gums">Current State of Gums:</string>
-    <string name="user_stateOfGums">N/A</string>
-    <string name="blueBox" />
+    <string name="pinkBox" />
     <string name="currentStateOfGumsMessage">Current State of Gums:   </string>
+    <string name="userStateOfGums">N/A</string>
+    <string name="uselessBox" />
+    <string name="gumHistory">Gum History:</string>
+    <string name="title_activity_main2">Main2Activity</string>
 </resources>
