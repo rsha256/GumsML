@@ -35,7 +35,9 @@ import android.util.Log;
 import android.view.Display;
 import android.view.View;
 import android.widget.Button;
+import android.widget.GridLayout;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
@@ -44,9 +46,15 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Calendar;
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+    public TextView textView3;
+    public String state, message;
+
+    public static int isKlean = -1;
     private static final int GALLERY_REQUEST = 1234;
     private FloatingActionButton button;
     final static int RESULT_LOAD_IMG = 1234;
@@ -54,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     //    private TextView currentStateOfGumsMessage, userStateOfGums, uselessBox, pinkBox, gumHistory;
     //    private ScrollView scroll;
-    //    private GridLayout grid;
+        private GridLayout grid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,8 +73,50 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button = findViewById(R.id.floatingActionButton);
         button.setOnClickListener(this);
 
+        textView3 =  findViewById(R.id.textView3);
 
+        state = "N/A";
+        message =  state;
+        textView3.setText(textView3.getText() + state);
     }
+
+//    public void detect(){
+//        textView3 = (TextView) findViewById(R.id.textView3);
+//        state = "N/A";
+//        message = "Current State of Gums: " + state;
+//        textView3.setText(message);
+//
+//        label2: while (true) {
+//            if (isKlean == 1) {
+//                state = "HEALTHY";
+//                message = "Current State of Gums: " + state;
+//                textView3.setText(message);
+//                break label2;
+//            } else if (isKlean == 2) {
+//                state = "NOT HEALTHY";
+//                message = "Current State of Gums: " + state;
+//                textView3.setText(message);
+//                break label2;
+//            }
+//            textView3.setText(message);
+//        }
+//    }
+
+    public void detect(int isKlean){
+        System.out.println(isKlean +" FUCK YOUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU");
+        if (isKlean == 1) {
+                state = "HEALTHY";
+                message = "Current State of Gums: " + state;
+
+            textView3.setText(message);
+            } else if (isKlean == 2){
+                state = "NOT HEALTHY";
+                message = "Current State of Gums: " + state;
+            textView3.setText(message);            }
+//            textView3.setText(message);
+        }
+
+
 
     static final int REQUEST_IMAGE_CAPTURE = 1;
 
@@ -84,7 +134,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         startActivityForResult(photoPickerIntent, RESULT_LOAD_IMG);
     }
 
-    public static boolean check(Bitmap bitmap) {
+    public static int check(Bitmap bitmap) {
         int r = 0;
         int count = 0;
         double sumRatio = 0;
@@ -93,8 +143,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         double red = 0;
         double blue = 0;
 
-        label:
-        for (int row = start; row < bitmap.getHeight(); row++) {
+        label: for (int row = start; row < bitmap.getHeight(); row++) {
             for (int col = 0; col < bitmap.getWidth(); col++) {
                 red = Color.red(bitmap.getPixel(col, row));
                 green = Color.green(bitmap.getPixel(col, row));
@@ -114,10 +163,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             count++;
         }
         sumRatio /= count;
-        if (sumRatio > 0.005 && sumRatio < 0.007)
-            return true;
-        else
-            return false;
+        System.out.println(sumRatio + "Aegaegaegaeg");
+        if (sumRatio > 0.004 && sumRatio < 0.008) {// no disease
+            System.out.println("rahulwashere");
+            isKlean = 1;
+            return 1;
+        } else {
+            System.out.println("rahulwasnothere");
+            isKlean = 2;
+            return 2;
+        }
     }
 
     public static Bitmap getBitmap() {
@@ -663,16 +718,45 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 }
                             });
                             iView.setImageBitmap(bitmap);
-                            check(bitmap);
+//                            detect(check(bitmap));
                         }
                     } catch (Exception e) {
                         Log.i("TAG", "Some exception " + e.toString());
 
                     }
+                    detect(check(bitmap));
+                    addToHistory();
                     break;
                 default:
+                    detect(check(bitmap));
+                    addToHistory();
                     Log.i("TAG", "God Why");
                     break;
             }
+
+
+
+    }
+
+
+
+
+    public void addToHistory(){
+//        android.support.v7.widget.GridLayout grid = (android.support.v7.widget.GridLayout) findViewById(R.id.GridLayout);
+//        int rowCount = grid.getRowCount();
+        Date currentTime = Calendar.getInstance().getTime();
+
+        TextView textView7 = (TextView)findViewById(R.id.textView7);
+        String idk = "";
+        if(isKlean == 1)
+            idk = "HEALTHY";
+        else
+            idk = "UNHEALTHY";
+        textView7.setText(currentTime + "    " + idk);
+
+//        TextView textView8 = (TextView)findViewById(R.id.textView8);
+
+
+
     }
 }
