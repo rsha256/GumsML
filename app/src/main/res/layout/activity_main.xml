@@ -83,8 +83,8 @@
         android:layout_marginBottom="26dp"
         android:layout_marginStart="26dp"
         android:clickable="true"
+        android:onClick="onClick"
         app:backgroundTint="@android:color/holo_blue_bright"
         app:srcCompat="@android:drawable/ic_menu_camera" />
-
 
 </RelativeLayout>
