@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private FloatingActionButton button;
     final static int RESULT_LOAD_IMG = 1234;
     public static Bitmap bitmap;
+    public static int x = 0;
 
     //    private TextView currentStateOfGumsMessage, userStateOfGums, uselessBox, pinkBox, gumHistory;
     //    private ScrollView scroll;
@@ -725,11 +726,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                     }
                     detect(check(bitmap));
-                    addToHistory();
+                    if(x==0)
+                        addToHistory();
+                    else if(x == 1)
+                        addToHistory2();
+                    else if(x == 2)
+                        addToHistory3();
+                    else
+                        addToHistory4();
                     break;
                 default:
                     detect(check(bitmap));
-                    addToHistory();
+                    if(x==0)
+                        addToHistory();
+                    else if(x == 1)
+                        addToHistory2();
+                    else if(x == 2)
+                        addToHistory3();
+                    else
+                        addToHistory4();
                     Log.i("TAG", "God Why");
                     break;
             }
@@ -746,17 +761,64 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        int rowCount = grid.getRowCount();
         Date currentTime = Calendar.getInstance().getTime();
 
-        TextView textView7 = (TextView)findViewById(R.id.textView7);
+        TextView textView8 = (TextView)findViewById(R.id.textView8);
         String idk = "";
         if(isKlean == 1)
             idk = "HEALTHY";
         else
             idk = "UNHEALTHY";
-        textView7.setText(currentTime + "    " + idk);
+        textView8.setText(currentTime + "    " + idk);
 
 //        TextView textView8 = (TextView)findViewById(R.id.textView8);
 
+        x++;
 
+    }
 
+    public void addToHistory2(){
+        Date currentTime = Calendar.getInstance().getTime();
+
+        TextView textView11 = (TextView)findViewById(R.id.textView11);
+        String idk = "";
+        if(isKlean == 1)
+            idk = "HEALTHY";
+        else
+            idk = "UNHEALTHY";
+
+        textView11.setText(currentTime + "    " + idk);
+        x++;
+
+//        TextView textView8 = (TextView)findViewById(R.id.textView8);
+    }
+
+    public void addToHistory3(){
+        Date currentTime = Calendar.getInstance().getTime();
+
+        TextView textView14 = (TextView)findViewById(R.id.textView14);
+        String idk = "";
+        if(isKlean == 1)
+            idk = "HEALTHY";
+        else
+            idk = "UNHEALTHY";
+
+        textView14.setText(currentTime + "    " + idk);
+        x++;
+
+//        TextView textView8 = (TextView)findViewById(R.id.textView8);
+    }
+
+    public void addToHistory4(){
+        Date currentTime = Calendar.getInstance().getTime();
+
+        TextView textView17 = (TextView)findViewById(R.id.textView17);
+        String idk = "";
+        if(isKlean == 1)
+            idk = "HEALTHY";
+        else
+            idk = "UNHEALTHY";
+
+        textView17.setText(currentTime + "    " + idk);
+
+//        TextView textView8 = (TextView)findViewById(R.id.textView8);
     }
 }

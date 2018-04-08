@@ -96,6 +96,93 @@
                 app:layout_row="8"
                 tools:text="invis" />
 
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="9dp"
+                android:text="@string/uselessBox"
+                android:visibility="invisible"
+                app:layout_column="0"
+                app:layout_row="9"
+                tools:text="invis" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="8pt"
+                app:layout_column="0"
+                app:layout_row="10" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="9dp"
+                android:text="@string/uselessBox"
+                android:visibility="invisible"
+                app:layout_column="0"
+                app:layout_row="11"
+                tools:text="invis" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="9dp"
+                android:text="@string/uselessBox"
+                android:visibility="invisible"
+                app:layout_column="0"
+                app:layout_row="12"
+                tools:text="invis" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="8pt"
+                app:layout_column="0"
+                app:layout_row="13" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="9dp"
+                android:text="@string/uselessBox"
+                android:visibility="invisible"
+                app:layout_column="0"
+                app:layout_row="14"
+                tools:text="invis" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="9dp"
+                android:text="@string/uselessBox"
+                android:visibility="invisible"
+                app:layout_column="0"
+                app:layout_row="15"
+                tools:text="invis" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="8pt"
+                app:layout_column="0"
+                app:layout_row="16" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="9dp"
+                android:text="@string/uselessBox"
+                android:visibility="invisible"
+                app:layout_column="0"
+                app:layout_row="17"
+                tools:text="invis" />
+
 
         </android.support.v7.widget.GridLayout>
     </ScrollView>
