@@ -14,14 +14,14 @@ Our app detected that this person will have severe gum disease in the near futur
 [logo]: https://cdn.discordapp.com/attachments/374678012651896845/432852976114204682/Gum_Disease.jpg "Early Gum Disease"
 
 This person already has gum disease, so our app would return `UNHEALTHY`:
-![alt text][logo]
+![alt][logo1]
 
-[logo]: https://cdn.discordapp.com/attachments/374678012651896845/432852975686516736/BAD-1.jpg "Really Bad Gums"
+[logo1]: https://cdn.discordapp.com/attachments/374678012651896845/432852975686516736/BAD-1.jpg "Really Bad Gums"
 
 This person has healthy gums: 
-![alt text][logo]
+![alt txt][logo2]
 
-[logo]: https://cdn.discordapp.com/attachments/374678012651896845/432852976114204686/GOOD.jpg "Healthy Gums"
+[logo2]: https://cdn.discordapp.com/attachments/374678012651896845/432852976114204686/GOOD.jpg "Healthy Gums"
 
 
 ## How we built it - 
