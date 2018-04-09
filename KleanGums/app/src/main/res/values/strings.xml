@@ -1,0 +1,23 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">KleanGums</string>
+    <string name="pinkBox" />
+    <string name="currentStateOfGumsMessage">Current State of Gums:   </string>
+    <string name="userStateOfGums" tools:keep="@string/userStateOfGums">N/A</string>
+    <string name="uselessBox" />
+    <string name="gumHistory">Gum History:</string>
+
+
+    <string name="intro_message" tools:keep="@string/intro_message">
+        <![CDATA[
+            This app will tell you whether or not you have gum disease!
+        ]]>
+    </string>
+    <string name="ok" tools:keep="@string/ok">OK</string>
+    <string name="camera_unavailable" tools:keep="@string/camera_unavailable"><b>Camera could not be opened.</b>\nThis occurs when the camera is not available (for example it is already in use) or if the system has denied access (for example when camera access has been disabled).</string>
+    <string name="back" tools:keep="@string/back">Back</string>
+    <string name="show_camera" tools:keep="@string/show_camera">Show camera preview</string>
+    <string name="main_introduction" tools:keep="@string/main_introduction">Click the buttons below to show a camera preview or access the contacts database.\nNote that the contacts option is only available on Android M to illustrate the use of optional, M-only permissions that are not requested on lower SDK platforms.</string>
+    <string name="permision_available_camera" tools:keep="@string/permision_available_camera">Camera Permission has been granted. Preview can now be opened.</string>
+    <string name="permissions_not_granted" tools:keep="@string/permissions_not_granted">Permissions were not granted.</string>
+    <string name="permission_camera_rationale" tools:keep="@string/permission_camera_rationale">Camera permission is needed to show the camera preview.</string>
+</resources>
