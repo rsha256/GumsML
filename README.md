@@ -1,17 +1,17 @@
-# KleanGums
+# KleanGums - Ronit A. Varun N. Rahul S. Nafisa O.
 HackKean Project 2018
 
-## Inspiration - 
+## Inspiration: 
 75% of people worldwide have gum disease. Since there was no technology or API to build off of we decided to make our own app to solve a common problem
 
-## What it does - 
+## What it does: 
 It tells a user whether or not they have a gum disease based off of a submitted image.
 
-# Example
+# Example:
 Our app detected that this person will have severe gum disease in the near future:
 ![alt text][logo]
 
-[logo]: https://cdn.discordapp.com/attachments/374678012651896845/432852976114204682/Gum_Disease.jpg "Justin Data"
+[logo]: https://cdn.discordapp.com/attachments/374678012651896845/432852976114204682/Gum_Disease.jpg "Early Gum Disease"
 
 This person already has gum disease, so our app would return `UNHEALTHY`:
 ![alt text][logo]
@@ -21,7 +21,7 @@ This person already has gum disease, so our app would return `UNHEALTHY`:
 This person has healthy gums: 
 ![alt text][logo]
 
-[logo]: https://cdn.discordapp.com/attachments/374678012651896845/432852976114204686/GOOD.jpg "Justin Bieber Data"
+[logo]: https://cdn.discordapp.com/attachments/374678012651896845/432852976114204686/GOOD.jpg "Healthy Gums"
 
 
 ## How we built it - 
