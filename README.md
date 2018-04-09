@@ -1,5 +1,5 @@
 # KleanGums - Ronit A. Varun N. Rahul S. Nafisa O.
-HackKean Project 2018
+Our HackKean Project 2018 that won 2nd place overall!
 
 ## Inspiration: 
 75% of people worldwide have gum disease. Since there was no technology or API to build off of we decided to make our own app to solve a common problem
