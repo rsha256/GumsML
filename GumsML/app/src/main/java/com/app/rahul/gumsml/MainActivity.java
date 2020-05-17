@@ -119,13 +119,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             count++;
         }
         sumRatio /= count;
-        System.out.println(sumRatio + "Aegaegaegaeg");
         if (sumRatio > 0.004 && sumRatio < 0.008) {// no disease
-            System.out.println("rahulwashere");
             isHealthy = 1;
             return 1;
         } else {
-            System.out.println("rahulwasnothere");
             isHealthy = 2;
             return 2;
         }
